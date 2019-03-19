@@ -1,5 +1,5 @@
 # Nom des étudiants de ce binôme 
-(les DEUX noms) : XXXXX et XXXXXX
+(les DEUX noms) : Alexis PETIT et Arthur DEBAR
 
 Commentaires éventuels des étudiants : XXXXXX
 
