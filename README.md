@@ -75,6 +75,8 @@ Il est bien sûr également possible d'injecter des classes concrètes (comme ic
 Observer la méthode `ClientMail.main()` : elle charge la configuration et créé l'objet de haut niveau de l'arbre d'injection : un `InterpreteurLigneCommande`.
 
 2) L'objet `InterpreteurLigneCommande` a besoin d'un `MailService`. Lui injecter (injection par constructeur) via l’annotation (standard java) `@Inject`.
+Injection de dépendance dans le constructeur pour faciliter les TU.
+Pas dans la propriété car mieux pour les TU.
 
 3) Faire de même pour l'injection du `MailSender` dans le `MailService`.
 
