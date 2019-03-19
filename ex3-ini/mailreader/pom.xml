@@ -26,5 +26,13 @@
 			<artifactId>guice</artifactId>
 			<version>4.1.0</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.infinitest/infinitest -->
+<dependency>
+    <groupId>org.infinitest</groupId>
+    <artifactId>infinitest</artifactId>
+    <version>4.0.1</version>
+</dependency>
+		
+
 	</dependencies>
 </project>
