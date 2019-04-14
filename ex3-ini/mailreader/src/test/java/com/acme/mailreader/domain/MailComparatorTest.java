@@ -31,10 +31,19 @@ public class MailComparatorTest {
 		Mail mail2 = null;
 		assertThat(comparator.compare(mail1, mail2), is(0));
 	}
-	
-	//TODO
-	//Autres tests unitaires
-	
-	
-	
+
+	@Test 
+	public final void inferieurSiSujetNul() throws DateIncorrecteException {
+		Mail mail1 = new Mail.Builder(null).important(false).statut(Statut.READ).date(Instant.now()).build();
+		Mail mail2 = new Mail.Builder("uyyuy").important(false).statut(Statut.READ).date(Instant.now()).build();
+		assertThat(comparator.compare(mail1, mail2),is(1));	
+	}
+
+	@Test 
+	public final void egauxSiMailsEgaux() throws DateIncorrecteException {
+		Mail mail1 = new Mail.Builder("uyyuy").important(true).statut(Statut.READ).date(Instant.now()).build();
+		Mail mail2 = new Mail.Builder("uyyuy").important(true).statut(Statut.READ).date(Instant.now()).build();
+		assertThat(comparator.compare(mail1, mail2),is(0));	
+	}	
+
 }
